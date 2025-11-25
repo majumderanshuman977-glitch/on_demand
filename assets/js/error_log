@@ -1,0 +1,24 @@
+[17-Jun-2024 13:58:06 UTC] PHP Warning:  include(../includes/connection.php): Failed to open stream: No such file or directory in /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php on line 7
+[17-Jun-2024 13:58:06 UTC] PHP Warning:  include(): Failed opening '../includes/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php on line 7
+[17-Jun-2024 13:58:06 UTC] PHP Warning:  Undefined variable $mysqli in /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php on line 31
+[17-Jun-2024 13:58:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php:23
+Stack trace:
+#0 /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php(31): test_check_activation_key(NULL)
+#1 {main}
+  thrown in /home1/omkriuhp/scripts/api.wowcodes.in/admin/assets/js/app.php on line 23
+[17-Aug-2024 17:23:36 UTC] PHP Warning:  include(../includes/connection.php): Failed to open stream: No such file or directory in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 64
+[17-Aug-2024 17:23:37 UTC] PHP Warning:  include(): Failed opening '../includes/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 64
+[17-Aug-2024 17:23:37 UTC] PHP Warning:  Undefined variable $mysqli in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 65
+[17-Aug-2024 17:23:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php:22
+Stack trace:
+#0 /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php(65): check_activation_key(NULL)
+#1 {main}
+  thrown in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 22
+[17-Aug-2024 17:23:52 UTC] PHP Warning:  include(../includes/connection.php): Failed to open stream: No such file or directory in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 69
+[17-Aug-2024 17:23:52 UTC] PHP Warning:  include(): Failed opening '../includes/connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 69
+[17-Aug-2024 17:23:52 UTC] PHP Warning:  Undefined variable $mysqli in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 70
+[17-Aug-2024 17:23:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php:27
+Stack trace:
+#0 /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php(70): check_activation_key(NULL)
+#1 {main}
+  thrown in /home1/omkriuhp/new.wowcodes.in/admin/assets/js/app.php on line 27

@@ -1,0 +1,57 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboards",
+      "icon": "menu-icon tf-icons mdi mdi-home-outline",
+      "slug": "dashboard"
+    },
+    {
+      "url": "/admin/users",
+      "name": "Users",
+      "icon": "menu-icon tf-icons mdi mdi-account-outline",
+      "slug": "users"
+    },
+    {
+      "url": "/admin/categories",
+      "name": "Category",
+      "icon": "menu-icon tf-icons mdi mdi-window-maximize",
+      "slug": "categories"
+    },
+    {
+      "url": "/admin/services",
+      "name": "Services",
+      "icon": "menu-icon tf-icons mdi mdi-window-maximize",
+      "slug": "Services"
+    },
+    {
+      "name": "Service Parts",
+      "icon": "menu-icon tf-icons mdi mdi-window-maximize",
+      "slug": "Service Parts",
+      "submenu": [
+        {
+          "url": "/admin/service-parts/categories",
+          "name": " Service Parts Categories",
+          "slug": "service-parts-categories"
+        },
+        {
+          "url": "/admin/service-parts",
+          "name": " Service Parts ",
+          "slug": "service-parts"
+        }
+      ]
+    },
+    {
+      "name": "Bookings",
+      "icon": "menu-icon tf-icons mdi mdi-window-maximize",
+      "slug": "Bookings",
+      "submenu": [
+        {
+          "url": "/admin/bookings",
+          "name": " Bookings List",
+          "slug": "bookings"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px; /* Gap between buttons */
+    }
+
+    .button-container a {
+         /*flex: 1 1 calc(40% - 10px); 40% width minus the gap */
+        padding: 5px; /* Consistent padding for all buttons */
+        text-align: center; /* Center the text */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Cursor style */
+        text-decoration: none; /* Remove default text decoration */
+        transition: background-color 0.3s; /* Smooth transition on hover */
+    }
+
+    .blue-btn, .btn-primary, .btn-warning, .btn-danger {
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Cursor style */
+        text-decoration: none; /* Remove default text decoration */
+        transition: background-color 0.3s; /* Smooth transition on hover */
+    }
+    .blue-btn {
+        background-color: #007bff; /* Blue background color */
+        color: #fff; /* White text color */
+        padding: 10px 20px; /* Padding for the button */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Cursor style */
+        text-decoration: none; /* Remove default text decoration */
+        display: inline-block; /* Make it inline-block to adjust width */
+        transition: background-color 0.3s; /* Smooth transition on hover */
+    }
+    
+    .btn-view {
+        background-color: #007bff; /* Blue background color */
+        color: #fff; /* White text color */
+    }
+
+    .btn-view:hover {
+        background-color: #0056b3; /* Darker blue color on hover */
+        color: #fff; /* White text color */
+    }
+
+    .btn-edit {
+        background-color: #fd7e14; /* Orange background color */
+        color: #fff; /* White text color */
+    }
+
+    .btn-edit:hover {
+        background-color: #e67700; /* Darker orange color on hover */
+        color: #fff; /* White text color */
+    }
+
+    .btn-refund {
+        background-color: #ffc107; /* Yellow background color */
+        color: #000; /* Black text color */
+    }
+
+    .btn-refund:hover {
+        background-color: #e0a800; /* Darker yellow color on hover */
+        color: #000; /* Black text color */
+    }
+    
+    .btn-download {
+        background-color: #6f42c1; /* Purple background color */
+        color: #fff; /* White text color */
+    }
+    
+    .btn-download:hover {
+        background-color: #5a32a3; /* Darker purple color on hover */
+        color: #fff; /* White text color */
+    }
+
+    .btn-delete {
+        background-color: #dc3545; /* Red background color */
+        color: #fff; /* White text color */
+    }
+
+    .btn-delete:hover {
+        background-color: #bd2130; /* Darker red color on hover */
+        color: #fff; /* White text color */
+    }
