@@ -21,7 +21,7 @@ use Illuminate\Routing\Controller as BaseController;
  * )
  *
  * @OA\Post(
- *     path="/api/otp-login",
+ *     path="/admin_ondemand/api/otp-login",
  *     tags={"Authentication"},
  *     summary="Send OTP to user or provider",
  *     description="Creates a user if phone+role does not exist and sends OTP.",
@@ -63,7 +63,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/verify-otp",
+ *     path="/admin_ondemand/api/verify-otp",
  *     tags={"Authentication"},
  *     summary="Verify OTP for user or provider login",
  *     description="Verify sent OTP and return access token",
@@ -125,7 +125,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/register",
+ *     path="/admin_ondemand/api/register",
  *     tags={"Authentication"},
  *     summary="Register a new user or provider",
  *     description="Registers a user or provider and optionally uploads KYC document",
@@ -185,7 +185,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/profile",
+ *     path="/admin_ondemand/api/profile",
  *     tags={"Profile"},
  *     summary="Fetch logged-in user profile",
  *     description="Returns the profile details of the authenticated user",
@@ -228,7 +228,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
 * @OA\Post(
- *     path="/api/profile/update-image",
+ *     path="/admin_ondemand/api/profile/update-image",
  *     summary="Update profile image of logged-in user",
  *     tags={"Profile"},
  *     security={{"passport":{}}},
@@ -273,7 +273,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * @OA\Post(
- *     path="/api/user/address",
+ *     path="/admin_ondemand/api/user/address",
  *     summary="Add new address for authenticated user",
  *     description="Allows only users (role=user) to add an address",
  *     tags={"Address"},
@@ -331,7 +331,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
   * @OA\Get(
- *     path="/api/user/addresses",
+ *     path="/admin_ondemand/api/user/addresses",
  *     summary="Get logged-in user's addresses",
  *     tags={"Address"},
  *     security={{"passport":{}}},
@@ -382,7 +382,7 @@ use Illuminate\Routing\Controller as BaseController;
  * ),
 
  * * @OA\Post(
- *     path="/api/logout",
+ *     path="/admin_ondemand/api/logout",
  *     summary="Logout the authenticated user",
  *     description="Revokes the current access token of the logged-in user",
  *     tags={"Authentication"},
@@ -417,7 +417,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/service-location",
+ *     path="/admin_ondemand/api/service-location",
  *     summary="Get provider service location",
  *     tags={"Provider"},
  *     security={{"passport": {}}},
@@ -428,7 +428,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/categories",
+ *     path="/admin_ondemand/api/categories",
  *     summary="Get paginated list of categories",
  *     tags={"Categories"},
  *     security={{"passport":{}}},
@@ -470,7 +470,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/sub-category-items",
+ *     path="/admin_ondemand/api/sub-category-items",
  *     summary="Get paginated list of sub-category items",
  *     tags={"Sub Category Items"},
  *     security={{"passport":{}}},
@@ -524,7 +524,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/services",
+ *     path="/admin_ondemand/api/services",
  *     summary="Get paginated list of services",
  *     tags={"Services"},
  *     security={{"passport":{}}},
@@ -571,7 +571,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/cart/add",
+ *     path="/admin_ondemand/api/cart/add",
  *     summary="Add a service item to the user's cart",
  *     tags={"Cart"},
  *     security={{"passport":{}}},
@@ -617,7 +617,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/cart/increase",
+ *     path="/admin_ondemand/api/cart/increase",
  *     summary="Increase quantity of an item in the cart",
  *     tags={"Cart"},
  *     security={{"passport":{}}},
@@ -661,7 +661,7 @@ use Illuminate\Routing\Controller as BaseController;
  * ),
  *
  * * @OA\Post(
- *     path="/api/cart/decrease",
+ *     path="/admin_ondemand/api/cart/decrease",
  *     summary="Decrease cart item quantity",
  *     tags={"Cart"},
  *     security={{"passport": {}}},
@@ -700,7 +700,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/cart/view",
+ *     path="/admin_ondemand/api/cart/view",
  *     summary="View user's cart",
  *     tags={"Cart"},
  *     security={{"passport": {}}},
@@ -726,7 +726,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * @OA\Post(
- *     path="/api/service-slot",
+ *     path="/admin_ondemand/api/service-slot",
  *     summary="Create service booking(s) from cart",
  *     tags={"User Booking"},
  *     security={{"passport": {}}},
@@ -801,7 +801,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/provider/new-jobs",
+ *     path="/admin_ondemand/api/provider/new-jobs",
  *     summary="Fetch pending bookings for provider",
  *     tags={"Provider Bookings"},
  *     security={{"passport": {}}},
@@ -851,7 +851,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/provider/bookings/{id}/status",
+ *     path="/admin_ondemand/api/provider/bookings/{id}/status",
  *     summary="Change booking status by provider",
  *     tags={"Provider Bookings"},
  *     security={{"passport": {}}},
@@ -954,7 +954,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/provider/job-list",
+ *     path="/admin_ondemand/api/provider/job-list",
  *     summary="Get current and completed jobs for the logged-in provider",
  *     tags={"Provider Bookings"},
  *     security={{"passport":{}}},
@@ -1002,7 +1002,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/provider/rate-user",
+ *     path="/admin_ondemand/api/provider/rate-user",
  *     summary="Provider rates a user",
  *     tags={"Provider Reviews"},
  *     security={{"passport":{}}},
@@ -1054,7 +1054,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/provider/service-parts",
+ *     path="/admin_ondemand/api/provider/service-parts",
  *     summary="Get all service parts grouped by category",
  *     tags={"Cost Estimation"},
  *     security={{"passport":{}}},
@@ -1100,7 +1100,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/provider/cost-estimations",
+ *     path="/admin_ondemand/api/provider/cost-estimations",
  *     summary="Create a cost estimation for a booking",
  *     tags={"Cost Estimation"},
  *     security={{"passport":{}}},
@@ -1177,7 +1177,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/cost-estimations/update-status",
+ *     path="/admin_ondemand/api/cost-estimations/update-status",
  *     summary="Update the status of a cost estimation",
  *     tags={"Cost Estimation"},
  *     security={{"passport":{}}},
@@ -1228,7 +1228,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/user/rate-provider",
+ *     path="/admin_ondemand/api/user/rate-provider",
  *     summary="Rate a service provider",
  *     tags={"Reviews"},
  *     security={{"passport":{}}},
@@ -1279,7 +1279,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/wallet/balance",
+ *     path="/admin_ondemand/api/wallet/balance",
  *     summary="Get wallet balance",
  *     tags={"Wallet"},
  *     security={{"passport":{}}},
@@ -1312,7 +1312,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/wallet/transactions",
+ *     path="/admin_ondemand/api/wallet/transactions",
  *     summary="Get wallet transactions",
  *     tags={"Wallet"},
  *     security={{"passport":{}}},
@@ -1370,7 +1370,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Post(
- *     path="/api/wallet/add",
+ *     path="/admin_ondemand/api/wallet/add",
  *     summary="Add money to wallet",
  *     tags={"Wallet"},
  *     security={{"passport":{}}},
@@ -1421,7 +1421,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Post(
- *     path="/api/wallet/withdraw",
+ *     path="/admin_ondemand/api/wallet/withdraw",
  *     summary="Request wallet withdrawal",
  *     tags={"Wallet"},
  *     security={{"passport":{}}},
@@ -1480,7 +1480,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  * * @OA\Get(
- *     path="/api/conversations",
+ *     path="/admin_ondemand/api/conversations",
  *     summary="Get all conversations for the authenticated user",
  *     tags={"Messages"},
  *     security={{"passport":{}}},
@@ -1532,7 +1532,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Get(
- *     path="/api/conversations/{bookingId}",
+ *     path="/admin_ondemand/api/conversations/{bookingId}",
  *     summary="Get messages for a specific booking",
  *     tags={"Messages"},
  *     security={{"passport":{}}},
@@ -1577,7 +1577,7 @@ use Illuminate\Routing\Controller as BaseController;
  *     )
  * ),
  *  * @OA\Post(
- *     path="/api/conversations/send",
+ *     path="/admin_ondemand/api/conversations/send",
  *     summary="Send a message in a booking conversation",
  *     tags={"Messages"},
  *     security={{"passport":{}}},

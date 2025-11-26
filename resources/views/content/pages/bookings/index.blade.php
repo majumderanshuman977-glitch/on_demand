@@ -8,7 +8,7 @@
         <span class="text-muted fw-light">Bookings /</span> All Bookings
     </h4>
 
-    <a href="/" class="btn btn-secondary mb-3">
+    <a href="{{ route('dashboard-analytics') }}" class="btn btn-secondary mb-3">
         ← Back to Dashboard
     </a>
 
@@ -40,8 +40,8 @@
 
                                 <td>
                                     <span
-                                        class="badge 
-                                        @if ($booking->status == 'pending') bg-warning 
+                                        class="badge
+                                        @if ($booking->status == 'pending') bg-warning
                                         @elseif($booking->status == 'accepted') bg-success
                                         @elseif($booking->status == 'cancelled') bg-danger
                                         @else bg-secondary @endif">

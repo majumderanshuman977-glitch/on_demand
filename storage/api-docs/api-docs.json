@@ -6,14 +6,14 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/api/otp-login": {
+        "/admin_ondemand/api/otp-login": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Send OTP to user or provider",
                 "description": "Creates a user if phone+role does not exist and sends OTP.",
-                "operationId": "fa37ba5fb5d49dbb6ebc369bea40909a",
+                "operationId": "9f4cbed868f8de78bee5b19af2f5f006",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -105,14 +105,14 @@
                 }
             }
         },
-        "/api/verify-otp": {
+        "/admin_ondemand/api/verify-otp": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Verify OTP for user or provider login",
                 "description": "Verify sent OTP and return access token",
-                "operationId": "e7c1de7361ee2a35775ee7d51c577bae",
+                "operationId": "6b78d5e256d4c1873dd277b69b33be07",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -251,14 +251,14 @@
                 }
             }
         },
-        "/api/register": {
+        "/admin_ondemand/api/register": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Register a new user or provider",
                 "description": "Registers a user or provider and optionally uploads KYC document",
-                "operationId": "8648a71663a5df1ae130ae603ca15640",
+                "operationId": "bb899044d51aed591f0a64705113ff95",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -385,14 +385,14 @@
                 }
             }
         },
-        "/api/profile": {
+        "/admin_ondemand/api/profile": {
             "get": {
                 "tags": [
                     "Profile"
                 ],
                 "summary": "Fetch logged-in user profile",
                 "description": "Returns the profile details of the authenticated user",
-                "operationId": "6635abadb19c12c38bd62f253953fc3d",
+                "operationId": "7ea5c6218ef78fc75dd0abbeaa210afa",
                 "responses": {
                     "200": {
                         "description": "Profile fetched successfully",
@@ -487,13 +487,13 @@
                 ]
             }
         },
-        "/api/profile/update-image": {
+        "/admin_ondemand/api/profile/update-image": {
             "post": {
                 "tags": [
                     "Profile"
                 ],
                 "summary": "Update profile image of logged-in user",
-                "operationId": "ccf663592786c3a54b965e661a6908e7",
+                "operationId": "f0d324dc17db19e2713c7172656cb1b6",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -556,14 +556,14 @@
                 ]
             }
         },
-        "/api/user/address": {
+        "/admin_ondemand/api/user/address": {
             "post": {
                 "tags": [
                     "Address"
                 ],
                 "summary": "Add new address for authenticated user",
                 "description": "Allows only users (role=user) to add an address",
-                "operationId": "b8f8c65f5ca167dbd069bdf93d84e3e7",
+                "operationId": "147d249f911c9f5851ae3619d0d04bf8",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -699,13 +699,13 @@
                 ]
             }
         },
-        "/api/user/addresses": {
+        "/admin_ondemand/api/user/addresses": {
             "get": {
                 "tags": [
-                    "User"
+                    "Address"
                 ],
                 "summary": "Get logged-in user's addresses",
-                "operationId": "18f9160b1dbea04cfd3a8d9d2191bb08",
+                "operationId": "9043884a87a79362e1f5f0211b129b57",
                 "responses": {
                     "200": {
                         "description": "Addresses fetched successfully",
@@ -811,14 +811,14 @@
                 ]
             }
         },
-        "/api/logout": {
+        "/admin_ondemand/api/logout": {
             "post": {
                 "tags": [
                     "Authentication"
                 ],
                 "summary": "Logout the authenticated user",
                 "description": "Revokes the current access token of the logged-in user",
-                "operationId": "37d3d8dcaf9cf7b72406382d65eabd8c",
+                "operationId": "0c7f057e48b65653a5a615e2a6589ba7",
                 "responses": {
                     "200": {
                         "description": "Successfully logged out",
@@ -892,13 +892,13 @@
                 ]
             }
         },
-        "/api/service-location": {
+        "/admin_ondemand/api/service-location": {
             "get": {
                 "tags": [
                     "Provider"
                 ],
                 "summary": "Get provider service location",
-                "operationId": "77599825999e3c4e395bfa07927dd402",
+                "operationId": "df65f81eebb3894cb25841201f75edb5",
                 "responses": {
                     "200": {
                         "description": "Service location data"
@@ -911,13 +911,13 @@
                 ]
             }
         },
-        "/api/categories": {
+        "/admin_ondemand/api/categories": {
             "get": {
                 "tags": [
                     "Categories"
                 ],
                 "summary": "Get paginated list of categories",
-                "operationId": "73a061d41da7842117d4165e0dcf2523",
+                "operationId": "76844ba05eef1a9dace6b3b9998cc1f0",
                 "parameters": [
                     {
                         "name": "per_page",
@@ -996,13 +996,13 @@
                 ]
             }
         },
-        "/api/sub-category-items": {
+        "/admin_ondemand/api/sub-category-items": {
             "get": {
                 "tags": [
                     "Sub Category Items"
                 ],
                 "summary": "Get paginated list of sub-category items",
-                "operationId": "5f29cebcc10e558b772546331b713062",
+                "operationId": "b81eb8a530265aba479dafbf2ef00cce",
                 "parameters": [
                     {
                         "name": "per_page",
@@ -1103,13 +1103,13 @@
                 ]
             }
         },
-        "/api/services": {
+        "/admin_ondemand/api/services": {
             "get": {
                 "tags": [
                     "Services"
                 ],
                 "summary": "Get paginated list of services",
-                "operationId": "0480c4202a869dac861e797fe833ca83",
+                "operationId": "d888adf615cea71a375208fe8bc717f9",
                 "parameters": [
                     {
                         "name": "per_page",
@@ -1200,13 +1200,13 @@
                 ]
             }
         },
-        "/api/cart/add": {
+        "/admin_ondemand/api/cart/add": {
             "post": {
                 "tags": [
                     "Cart"
                 ],
                 "summary": "Add a service item to the user's cart",
-                "operationId": "a1d3e8a5b8a7097892744f8feb2213c2",
+                "operationId": "e1a7b2070d019f51a9171fb5ea1547e8",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1295,13 +1295,13 @@
                 ]
             }
         },
-        "/api/cart/increase": {
+        "/admin_ondemand/api/cart/increase": {
             "post": {
                 "tags": [
                     "Cart"
                 ],
                 "summary": "Increase quantity of an item in the cart",
-                "operationId": "649a52f02dc1ae50ba7423c6b283bbe5",
+                "operationId": "97da0246f027de4deb9ff8bee3c7a78d",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1359,13 +1359,13 @@
                 ]
             }
         },
-        "/api/cart/decrease": {
+        "/admin_ondemand/api/cart/decrease": {
             "post": {
                 "tags": [
                     "Cart"
                 ],
                 "summary": "Decrease cart item quantity",
-                "operationId": "211cc80b95c1b38bbc1b38fa2ddbe516",
+                "operationId": "daa92f78cd7c2358def839d649a7935e",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1431,13 +1431,13 @@
                 ]
             }
         },
-        "/api/cart/view": {
+        "/admin_ondemand/api/cart/view": {
             "get": {
                 "tags": [
                     "Cart"
                 ],
                 "summary": "View user's cart",
-                "operationId": "6ede2badb95646dbf48a6622993fccd2",
+                "operationId": "958a5241ab8d27cbe3be6e6b1529356f",
                 "responses": {
                     "200": {
                         "description": "Cart data fetched successfully",
@@ -1471,13 +1471,13 @@
                 ]
             }
         },
-        "/api/service-slot": {
+        "/admin_ondemand/api/service-slot": {
             "post": {
                 "tags": [
                     "User Booking"
                 ],
                 "summary": "Create service booking(s) from cart",
-                "operationId": "4e0a1c9a3c5b194e9ad693371544c095",
+                "operationId": "b84b43803158cd2cc4e95a8101b17980",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1591,13 +1591,13 @@
                 ]
             }
         },
-        "/api/provider/new-jobs": {
+        "/admin_ondemand/api/provider/new-jobs": {
             "get": {
                 "tags": [
                     "Provider Bookings"
                 ],
                 "summary": "Fetch pending bookings for provider",
-                "operationId": "f415243de6f0bb0e40fdd091d53c8e5e",
+                "operationId": "684e64d6dd89363e211d829d5f3acb01",
                 "responses": {
                     "200": {
                         "description": "Bookings fetched successfully",
@@ -1719,13 +1719,13 @@
                 ]
             }
         },
-        "/api/provider/bookings/{id}/status": {
+        "/admin_ondemand/api/provider/bookings/{id}/status": {
             "post": {
                 "tags": [
                     "Provider Bookings"
                 ],
                 "summary": "Change booking status by provider",
-                "operationId": "9e2e001d223f4d44a07e18eafc70c01e",
+                "operationId": "86d988315a91715061b3bdb5df6bfefe",
                 "parameters": [
                     {
                         "name": "id",
@@ -1843,13 +1843,13 @@
                 ]
             }
         },
-        "/api/provider/job-list": {
+        "/admin_ondemand/api/provider/job-list": {
             "get": {
                 "tags": [
                     "Provider Bookings"
                 ],
                 "summary": "Get current and completed jobs for the logged-in provider",
-                "operationId": "aeae309ec7822a91492fdb3688fcf124",
+                "operationId": "355abf9c6fbb6c60fb9760f5edbf9056",
                 "responses": {
                     "200": {
                         "description": "Jobs fetched successfully",
@@ -1928,13 +1928,13 @@
                 ]
             }
         },
-        "/api/provider/rate-user": {
+        "/admin_ondemand/api/provider/rate-user": {
             "post": {
                 "tags": [
                     "Provider Reviews"
                 ],
                 "summary": "Provider rates a user",
-                "operationId": "c0f1c8b9f8464c226f1c3faad7157ae5",
+                "operationId": "6f1236e22af348a3ce9c2afbd6ee2ae7",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2057,13 +2057,13 @@
                 ]
             }
         },
-        "/api/provider/service-parts": {
+        "/admin_ondemand/api/provider/service-parts": {
             "get": {
                 "tags": [
                     "Cost Estimation"
                 ],
                 "summary": "Get all service parts grouped by category",
-                "operationId": "f87b4f6bfb06eba75c57004138637982",
+                "operationId": "e603fd74cd046d0dec2195cd54175f80",
                 "responses": {
                     "200": {
                         "description": "Service parts fetched successfully",
@@ -2154,13 +2154,13 @@
                 ]
             }
         },
-        "/api/provider/cost-estimations": {
+        "/admin_ondemand/api/provider/cost-estimations": {
             "post": {
                 "tags": [
                     "Cost Estimation"
                 ],
                 "summary": "Create a cost estimation for a booking",
-                "operationId": "0840f38dc508127c04f66801915ef65a",
+                "operationId": "19c10e6d2082c7d0993c37da95519627",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2349,13 +2349,13 @@
                 ]
             }
         },
-        "/api/cost-estimations/update-status": {
+        "/admin_ondemand/api/cost-estimations/update-status": {
             "post": {
                 "tags": [
                     "Cost Estimation"
                 ],
                 "summary": "Update the status of a cost estimation",
-                "operationId": "b76f88f568ec1be0b8c79d6ff40d2a01",
+                "operationId": "c9830bbc64c51801eaf392eb9517c29b",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2478,13 +2478,13 @@
                 ]
             }
         },
-        "/api/user/rate-provider": {
+        "/admin_ondemand/api/user/rate-provider": {
             "post": {
                 "tags": [
                     "Reviews"
                 ],
                 "summary": "Rate a service provider",
-                "operationId": "4a02547fb84bd7003dea4bff84c1ace7",
+                "operationId": "504c32859123cca00f96b59afa5852e8",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2604,13 +2604,13 @@
                 ]
             }
         },
-        "/api/wallet/balance": {
+        "/admin_ondemand/api/wallet/balance": {
             "get": {
                 "tags": [
                     "Wallet"
                 ],
                 "summary": "Get wallet balance",
-                "operationId": "f97aa4ff8a9929da96d4d661af796f6b",
+                "operationId": "e54701b86903c0a2736a6ce5e02c8b32",
                 "responses": {
                     "200": {
                         "description": "Wallet balance retrieved successfully",
@@ -2681,13 +2681,13 @@
                 ]
             }
         },
-        "/api/wallet/transactions": {
+        "/admin_ondemand/api/wallet/transactions": {
             "get": {
                 "tags": [
                     "Wallet"
                 ],
                 "summary": "Get wallet transactions",
-                "operationId": "f6a7948ed9a216f19eaa8e5368381507",
+                "operationId": "77123ea94af5982f6ad02509484ead58",
                 "parameters": [
                     {
                         "name": "type",
@@ -2808,13 +2808,13 @@
                 ]
             }
         },
-        "/api/wallet/add": {
+        "/admin_ondemand/api/wallet/add": {
             "post": {
                 "tags": [
                     "Wallet"
                 ],
                 "summary": "Add money to wallet",
-                "operationId": "eabe03bfdc07b48e723c0900f3550387",
+                "operationId": "139cc16f124fc0c53261c632d611c77d",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2931,13 +2931,13 @@
                 ]
             }
         },
-        "/api/wallet/withdraw": {
+        "/admin_ondemand/api/wallet/withdraw": {
             "post": {
                 "tags": [
                     "Wallet"
                 ],
                 "summary": "Request wallet withdrawal",
-                "operationId": "31839a893c22db3185be0ca5b2cc8883",
+                "operationId": "abc51e042b7c2ebf55f8ecebb602f219",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -3069,13 +3069,13 @@
                 ]
             }
         },
-        "/api/conversations": {
+        "/admin_ondemand/api/conversations": {
             "get": {
                 "tags": [
                     "Messages"
                 ],
                 "summary": "Get all conversations for the authenticated user",
-                "operationId": "89f894ae27d14139147b018755447b5d",
+                "operationId": "eebe2f706ea59ce1c7704314dff04a63",
                 "responses": {
                     "200": {
                         "description": "List of conversations",
@@ -3182,13 +3182,13 @@
                 ]
             }
         },
-        "/api/conversations/{bookingId}": {
+        "/admin_ondemand/api/conversations/{bookingId}": {
             "get": {
                 "tags": [
                     "Messages"
                 ],
                 "summary": "Get messages for a specific booking",
-                "operationId": "1081a0d698cf00050e04dfba9b1b6067",
+                "operationId": "fddb2a15f9e13a919fbbc885e47ff0c3",
                 "parameters": [
                     {
                         "name": "bookingId",
@@ -3285,13 +3285,13 @@
                 ]
             }
         },
-        "/api/conversations/send": {
+        "/admin_ondemand/api/conversations/send": {
             "post": {
                 "tags": [
                     "Messages"
                 ],
                 "summary": "Send a message in a booking conversation",
-                "operationId": "97874ddc641980f7bfe4878e9efe6b1f",
+                "operationId": "914d2e25da2c2edcc356f8f1ff52a180",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -3560,10 +3560,6 @@
         {
             "name": "Address",
             "description": "Address"
-        },
-        {
-            "name": "User",
-            "description": "User"
         },
         {
             "name": "Provider",
