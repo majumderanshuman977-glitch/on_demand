@@ -16,6 +16,12 @@ class CategoryController extends Controller
             $perPage = $request->input('per_page', 10);
 
             $categories = Category::paginate($perPage);
+            $categories->getCollection()->transform(function ($category) {
+            $category->image_url = $category->category_image
+                ? asset('storage/' . $category->category_image)
+                : null;
+            return $category;
+        });
 
             return response()->json([
                 'success' => true,

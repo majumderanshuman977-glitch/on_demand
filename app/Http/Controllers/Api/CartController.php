@@ -81,7 +81,7 @@ class CartController extends Controller
             }
 
 
-            // $this->updateCartTotals($cart);
+            $this->updateCartTotals($cart);
 
             return response()->json([
                 'success' => true,

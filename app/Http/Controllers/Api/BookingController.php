@@ -68,7 +68,6 @@ class BookingController extends Controller
                         'subtotal' => $subtotal,
                         'tax' => $tax,
                         'total_amount' => $total,
-                        'notes' => null,
                         'status' => 'pending',
                     ]);
 
@@ -148,6 +147,7 @@ class BookingController extends Controller
         }
 
         $booking = Booking::findOrFail($bookingId);
+
         if (!$booking) {
             return response()->json(['success' => false, 'message' => 'Booking not found'], 404);
         }

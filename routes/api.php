@@ -21,9 +21,10 @@ Route::post('/verify-otp', [AuthController::class, 'verifyOtp']);
 
 
 Route::middleware('auth:api')->group(function () {
-    Route::post('/service-location', [AuthController::class, 'serviceLocation']);
+    Route::post('/service-location', [AuthController::class, 'serviceLocation']);    //check later
     Route::get('/profile', [ProfileController::class, 'profile']);
     Route::post('/profile/update-image', [ProfileController::class, 'updateImage']);
+     Route::get('/user/address', [UserController::class, 'getAddresses']);
     Route::post('/user/address', [UserController::class, 'store']);
     Route::get('/categories', [CategoryController::class, 'index']);
     Route::get('/sub-category-items', [SubCategoryItemController::class, 'index']);

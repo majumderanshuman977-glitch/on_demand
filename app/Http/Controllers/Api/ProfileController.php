@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
@@ -25,7 +26,7 @@ class ProfileController extends Controller
                     'phone' => $user->phone,
                     'role' => $user->role,
                     'profile_image' => $user->profile_image
-                        ? asset('uploads/profile/' . $user->profile_image)
+                        ? asset('storage/' . $user->profile_image)
                         : null,
                 ]
             ]);
@@ -102,11 +103,11 @@ class ProfileController extends Controller
     public function updateImage(Request $request)
     {
         try {
-            $user = $request->user();
+            // $user = $request->user();
+            $user = Auth::user();
 
             $validator = Validator::make($request->all(), [
                 'profile_image' => 'required|image|mimes:jpeg,png,jpg,webp',
-                'type' => 'required'
             ]);
 
             if ($validator->fails()) {

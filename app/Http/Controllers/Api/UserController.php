@@ -5,11 +5,41 @@ namespace App\Http\Controllers\Api;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+
+ public function getAddresses()
+{
+    try {
+        $user = Auth::user();
+
+        // Only users can fetch addresses
+        if ($user->role !== 'user') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Only users can fetch addresses.'
+            ], 403);
+        }
+
+        $addresses = $user->userAddress;
+
+        return response()->json([
+            'success' => true,
+            'addresses' => $addresses
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => $e->getMessage()
+        ], 500);
+    }
+}
+
+
 
     public function store(Request $request)
     {

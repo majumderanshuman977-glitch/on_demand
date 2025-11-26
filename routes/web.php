@@ -199,6 +199,18 @@ Route::middleware(['isAdmin'])->group(function () {
 });
 
 
+Route::get('/api/documentation', function () {
+    $documentation = config('l5-swagger.default');
+    $urlToDocs = route('l5-swagger.default.docs', $documentation);
+    $useAbsolutePath = false;
+
+    return view('vendor.l5-swagger.index', compact('documentation', 'urlToDocs', 'useAbsolutePath'));
+});
+
+
+
+
+
 Route::fallback(function () {
     if (auth()->check() && auth()->user()->is_admin) {
         return redirect()->route('admin.dashboard');
